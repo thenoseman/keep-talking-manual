@@ -11,13 +11,13 @@
     <tspan>S</tspan>
   </text>
   <text font-family="Special Elite, sans-serif" text-anchor="middle" x="100" y="350" font-size="3em">
-    <tspan>C<tspan fill="Green">⊙</tspan></tspan>
-  <tspan fill="Orange">★</tspan></text>
+    <tspan>✂</tspan>
+    <tspan fill="Orange">★</tspan></text>
   <text font-family="Special Elite, sans-serif" text-anchor="middle" x="700" y="350" font-size="3em">
     <tspan>D</tspan>
   <tspan fill="Green">⊙</tspan></text>
   <text xmlns="http://www.w3.org/2000/svg" font-family="Special Elite, sans-serif" text-anchor="middle" x="185" y="250" font-size="2em">
-    <tspan>C</tspan>
+    <tspan>✂</tspan>
   <tspan fill="Orange">★</tspan>
   </text>
   <text font-family="Special Elite, sans-serif" text-anchor="middle" x="400" y="225" font-size="2em">
@@ -51,6 +51,6 @@
     <tspan>D</tspan>
   <tspan fill="Orange">★</tspan><tspan fill="Green">⊙</tspan></text>
   <text font-family="Special Elite, sans-serif" text-anchor="middle" x="400" y="80" font-size="3em">
-    <tspan>C</tspan>
+    <tspan>✂</tspan>
   </text>
 </svg>
