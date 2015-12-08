@@ -317,7 +317,7 @@ td, th {
 .absolute-footer {
     position: relative;
     height: 0;
-    top: 63em; /* = 10.5in at 12pt (1em) */
+    top: 68em; /* = 10.5in at 12pt (1em) */
     display: none;
 }
 
@@ -891,4 +891,27 @@ td, th {
     h3 {
         page-break-after: avoid;
     }
+}
+
+.whos-on-first-step1-table td table {
+  width: 90%;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.whos-on-first-step1-table td table td {
+  font-size: .7em;
+}
+
+.whos-on-first-step1-table td table td.whos-on-first-look-at {
+  background-color: #000;
+}
+
+.whos-on-first-step1-table td table th {
+  font-size: .7em;
+  padding: 0
+}
+
+.whos-on-first-step1-table td {
+  padding: 0 0 .3em 0;
 }

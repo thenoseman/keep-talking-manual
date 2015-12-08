@@ -12,7 +12,7 @@ $(document).ready(function () {
                     $(this).html("Page " + currentPage + " of " + pageCount);
                 }
             });
-			
+
 			// pages without page count are the main body
 			$(this).addClass('page-bg-0' + currentBG);
 			currentBG++
