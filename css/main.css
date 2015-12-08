@@ -903,8 +903,8 @@ td, th {
   font-size: .7em;
 }
 
-.whos-on-first-step1-table td table td.whos-on-first-look-at {
-  background-color: #000;
+.whos-on-first-step1-table td table td.whos-on-first-look-at:before {
+  content:"X"
 }
 
 .whos-on-first-step1-table td table th {
@@ -919,4 +919,9 @@ td, th {
 
 .needy-knob .imp {
   background-color: Orange;
+}
+
+.whos-on-first-look-at-display {
+  background-color: #fff;
+  color: #000;
 }
