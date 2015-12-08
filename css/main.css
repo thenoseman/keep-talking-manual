@@ -915,3 +915,8 @@ td, th {
 .whos-on-first-step1-table td {
   padding: 0 0 .3em 0;
 }
+
+
+.needy-knob .imp {
+  background-color: Orange;
+}
