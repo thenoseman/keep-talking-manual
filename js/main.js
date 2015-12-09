@@ -23,17 +23,22 @@ $(document).ready(function () {
     }
   });
 
-  $(".needy-knob table")
+  var text = "";
+  $(".needy-knob table").each(function(i3, $table) {
+    text = $table.className.replace("knob-","").substr(0,2);
+    $($table)
     .find("td:nth-child(5)")
     .addClass("imp")
+    .text(text)
     .end()
     .find("tr:nth-child(2)").each(function(i2, e) {
-      console.log(e);
       $(e).find("td").each(function(index, f) {
         if(index > 2) {
           $(this).addClass("imp");
+          $(this).text(text);
         }
       });
     });
+  })
 
 });
