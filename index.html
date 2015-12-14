@@ -127,15 +127,172 @@
               <p class="flavour-text">
                 Wires are the lifeblood of electronics! Wait, no, electricity is the lifeblood. Wires are more like the arteries. The veins? No matter…</p>
 
-              <ul>
-                <li>A wire module can have 3-6 wires on it.</li>
-                <li>Only the <em>one</em> correct wire needs to be cut to disarm the module.</li>
+  <table id="the-wires">
+    <thead>
+      <tr>
+        <th>Conditions</th>
+        <th>Wire to cut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th colspan="2">3 wires</th>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>No <span class="color-red">red</span> wires?</li>
+          </ul>
+        </td>
+        <td>✄ 2nd</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Last wire is <span class="color-white">white</span>?</li>
+          </ul>
+        </td>
+        <td>✄ last</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>More than one <span class="color-blue">blue</span> wire?</li>
+          </ul>
+        </td>
+        <td>✄ last <span class="color-blue">blue</span></td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Otherwise</li>
+          </ul>
+        </td>
+        <td>✄ last</td>
+      </tr>
+      <tr>
+        <th colspan="2">4 wires</th>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>More than one <span class="color-red">red</span> wire and</li>
+            <li>last digit of the serial number is <em>odd</em>?</li>
+          </ul>
+        </td>
+        <td>✄ last <span class="color-red">red</span></td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Last wire is <span class="color-yellow">yellow</span> and</li>
+            <li>no <span class="color-red">red</span> wires?</li>
+          </ul>
+        </td>
+        <td>✄ 1st</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Exactly one <span class="color-blue">blue</span> wire?</li>
+          </ul>
+        </td>
+        <td>✄ 1st</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>More than one <span class="color-yellow">yellow</span> wire?</li>
+          </ul>
+        </td>
+        <td>✄ last</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Otherwise</li>
+          </ul>
+        </td>
+        <td>✄ 2nd</td>
+      </tr>
+      <tr>
+        <th colspan="2">5 wires</th>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Last wire is <span class="color-black">black</span> and</li>
+            <li>last digit of the serial number is <em>odd</em>?</li>
+          </ul>
+        </td>
+        <td>✄ 4th</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Exactly one <span class="color-red">red</span> wire and</li>
+            <li>more than one <span class="color-yellow">yellow</span> wire?</li>
+          </ul>
+        </td>
+        <td>✄ 1st</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>No <span class="color-black">black</span> wires?</li>
+          </ul>
+        </td>
+        <td>✄ 2nd</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Otherwise</li>
+          </ul>
+        </td>
+        <td>✄ 1st</td>
+      </tr>
+      <tr>
+        <th colspan="2">6 wires</th>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>No <span class="color-yellow">yellow</span> wires and</li>
+            <li>last digit of the serial number is <em>odd</em>?</li>
+          </ul>
+        </td>
+        <td>✄ 3rd</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Exactly one <span class="color-yellow">yellow</span> wire and</li>
+            <li>more than one <span class="color-white">white</span> wire?</li>
+          </ul>
+        </td>
+        <td>✄ 4th</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>No <span class="color-red">red</span> wires?</li>
+          </ul>
+        </td>
+        <td>✄ last</td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="conditions">
+            <li>Otherwise</li>
+          </ul>
+        </td>
+        <td>✄ 4th</td>
+      </tr>
+    </tbody>
+  </table>
 
-                <li>Wire ordering begins with the first on the top.</li>
-              </ul>
 
-              <table>
-                <tbody><tr><td><strong><em>3 wires:</em></strong>	<br>If there are no red wires, cut the second wire.<br>Otherwise, if the last wire is white, cut the last wire.<br>Otherwise, if there is more than one blue wire, cut the last blue wire.<br>Otherwise, cut the last wire.</td></tr><tr><td><strong><em>4 wires:</em></strong><br>If there is more than one red wire and the last digit of the serial number is odd, cut the last red wire.<br>Otherwise, if the last wire is yellow and there are no red wires, cut the first wire.<br>Otherwise, if there is exactly one blue wire, cut the first wire.<br>Otherwise, if there is more than one yellow wire, cut the last wire.<br>Otherwise, cut the second wire.</td></tr><tr><td><strong><em>5 wires:</em></strong><br>If the last wire is black and the last digit of the serial number is odd, cut the fourth wire.<br>Otherwise, if there is exactly one red wire and there is more than one yellow wire, cut the first wire.<br>Otherwise, if there are no black wires, cut the second wire.<br>Otherwise, cut the first wire.</td></tr><tr><td><strong><em>6 wires:</em></strong><br>If there are no yellow wires and the last digit of the serial number is odd, cut the third wire.<br>Otherwise, if there is exactly one yellow wire and there is more than one white wire, cut the fourth wire.<br>Otherwise, if there are no red wires, cut the last wire.<br>Otherwise, cut the fourth wire.</td></tr>			</tbody></table>
             </div>
             <div class="page-footer relative-footer">Page 5 of 22</div>
           </div>
@@ -152,12 +309,101 @@
               <h2>On the Subject of The Button</h2>
               <p class="flavour-text">You might think that a button telling you to press it is pretty straightforward. That’s the kind of thinking that gets people exploded.</p>
               <p class="appendix-reference">See Appendix A for indicator identification reference.<br>See Appendix B for battery identification reference.</p>		    <p>Follow these rules in the order they are listed. Perform the first action that applies:</p>
-              <ol>
-                <li>If the button is <span style="color: #B3D4FC">blue</span> and the button says "Abort", hold the button and refer to "Releasing a Held Button".</li><li>If there is more than 1 battery on the bomb and the button says "Detonate", press and immediately release the button.</li><li>If the button is white and there is a lit indicator with label CAR, hold the button and refer to "Releasing a Held Button".</li><li>If there are more than 2 batteries on the bomb and there is a lit indicator with label FRK, press and immediately release the button.</li><li>If the button is <span style="color: Yellow">yellow</span>, hold the button and refer to "Releasing a Held Button".</li><li>If the button is <span style="color: Red">red</span> and the button says "Hold", press and immediately release the button.</li><li>If none of the above apply, hold the button and refer to "Releasing a Held Button".</li>            </ol>
-              <h3>Releasing a Held Button</h3>
-              <p>If you start holding the button down, a colored strip will light up on the right side of the module. Based on its color you must release the button at a specific point in time:</p>
-              <ul>
-                <li><em>Blue strip:</em> release when the countdown timer has a 4 in any position.</li><li><em>Yellow strip:</em> release when the countdown timer has a 5 in any position.</li><li><em>Any other color strip:</em> release when the countdown timer has a 1 in any position.</li>            </ul>
+<table id="the-button">
+  <thead>
+    <tr>
+      <th>Conditions</th>
+      <th>Press button and …</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul class="conditions">
+          <li>Is <span class="color-blue">blue</span> and</li>
+          <li>labeled &quot;Abort&quot;?</li>
+        </ul>
+      </td>
+      <td>hold</td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="conditions">
+          <li>More than one battery and</li>
+          <li>labeled &quot;Detonate&quot;?</li>
+        </ul>
+      </td>
+      <td>release immediately</td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="conditions">
+          <li>Is <span class="color-white">white</span> and</li>
+          <li>a lit indicator labeled &quot;CAR&quot; exists?</li>
+        </ul>
+      </td>
+      <td>hold</td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="conditions">
+          <li>More than two batteries and</li>
+          <li>a lit indicator labeled &quot;FRK&quot; exists?</li>
+        </ul>
+      </td>
+      <td>release immediately</td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="conditions">
+          <li>Is <span class="color-yellow">yellow</span>?</li>
+        </ul>
+      </td>
+      <td>hold</td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="conditions">
+          <li>Is <span class="color-red">red</span> and</li>
+          <li>labeled &quot;Hold&quot;?</li>
+        </ul>
+      </td>
+      <td>release immediately</td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="conditions">
+          <li>None of the above?</li>
+        </ul>
+      </td>
+      <td>hold</td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="margin-top: 2em;">
+  <thead>
+    <tr>
+      <th>Strip Color</th>
+      <th>Digit in Countdown Timer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="color-blue">blue</span></td>
+      <td class="number">4</td>
+    </tr>
+    <tr>
+      <td><span class="color-yellow">yellow</span></td>
+      <td class="number">5</td>
+    </tr>
+    <tr>
+      <td>otherwise</td>
+      <td class="number">1</td>
+    </tr>
+  </tbody>
+</table>
+               
               <p>Always release when the timer shows 1,4 and 5 at the same time (5:41, 5:14, 4:51, 4:15, 1:54, 1:45)</p>
             </div>
             <div class="page-footer relative-footer">Page 6 of 22</div>
@@ -883,7 +1129,55 @@
 
 
                 <div>
-                  <object id="venndiagram" width="100%" height="100%" data="img/gen/venn/venndiagram.svg" type="image/svg+xml"></object>
+  <table class="complicatedwires">
+    <thead>
+      <tr>
+        <th>Wire Color</th>
+        <th>LED</th>
+        <th>LED + ★</th>
+        <th>★</th>
+        <th>neither</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th style="background-color: white;">&nbsp;</th>
+        <td>×</td>
+        <td>⚡⚡+</td>
+        <td>✄</td>
+        <td>✄</td>
+      </tr>
+      <tr>
+        <th style="background-image: repeating-linear-gradient(-45deg, white, white 10px, red 10px, red 20px);">&nbsp;</th>
+        <td rowspan="2">⚡⚡+</td>
+        <td rowspan="2">⚡⚡+</td>
+        <td rowspan="2">✄</td>
+        <td rowspan="2"><sup>#</sup>/<sub>2</sub></td>
+      </tr>
+      <tr>
+        <th style="background-color: red;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="background-image: repeating-linear-gradient(-45deg, white, white 10px, blue 10px, blue 20px);">&nbsp;</th>
+        <td rowspan="2">•◥■◤•</td>
+        <td rowspan="2">•◥■◤•</td>
+        <td rowspan="2">×</td>
+        <td rowspan="2"><sup>#</sup>/<sub>2</sub></td>
+      </tr>
+      <tr>
+        <th style="background-color: blue;">&nbsp;</th>
+      </tr>
+      <tr>
+        <th style="background-image: repeating-linear-gradient(-45deg, red, red 10px, blue 10px, blue 20px);">&nbsp;</th>
+        <td><sup>#</sup>/<sub>2</sub></td>
+        <td>×</td>
+        <td>•◥■◤•</td>
+        <td><sup>#</sup>/<sub>2</sub></td>
+      </tr>
+    </tbody>
+  </table>
+                  
+                  <!--<object id="venndiagram" width="100%" height="100%" data="img/gen/venn/venndiagram.svg" type="image/svg+xml"></object>-->
                 </div>
                 <p>Always CUT for WHITE, WHITE STAR and RED STAR</p>
                 <div>
