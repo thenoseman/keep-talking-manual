@@ -120,6 +120,7 @@ body {
 @media print {
     body {
         background: none;
+        -webkit-print-color-adjust: exact;
     }
 }
 
@@ -969,4 +970,33 @@ span[class^=color-] {
 
 #the-wires th {
   background-color: #eee;
+}
+
+.needy-knob .imp-up:before {
+  content: "↑"
+}
+
+.needy-knob .imp-do:before {
+  content: "↓"
+}
+
+.needy-knob .imp-le:before {
+  content: "←"
+}
+
+.needy-knob .imp-ri:before {
+  content: "→"
+}
+
+.notes {
+  margin-top: 1em;
+}
+
+img[src='img/battery.svg'] {
+  margin-right: 4px;
+  height: 20px;
+}
+
+img[src='img/parallel-port.svg'] {
+  height: 18px;
 }

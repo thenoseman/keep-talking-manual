@@ -29,13 +29,19 @@ $(document).ready(function () {
     $($table)
     .find("td:nth-child(5)")
     .addClass("imp")
-    .text(text)
+    .each(function(i0, e) {
+      if($(this).text().indexOf("X") > -1) {
+        $(this).addClass("imp-" + text);
+      }
+    })
     .end()
     .find("tr:nth-child(2)").each(function(i2, e) {
       $(e).find("td").each(function(index, f) {
         if(index > 2) {
           $(this).addClass("imp");
-          $(this).text(text);
+          if($(this).text().indexOf("X") > -1) {
+            $(this).addClass("imp-" + text);
+          }
         }
       });
     });
